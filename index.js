@@ -27,6 +27,9 @@ const puppeteer = require('puppeteer');
             if (daysEl) {
                 const daysCont = await daysEl.getProperty('textContent');
                 day = await daysCont.jsonValue();
+                const d = ('00' + day).slice(-2);
+                const m = ('00' + month).slice(-2);
+                day = `${year}-${m}-${d}`
             }
             const eventEls = await tds[1].$$('.event');
             let events = [];
