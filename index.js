@@ -79,7 +79,7 @@ const puppeteer = require('puppeteer');
                     'True',
                     'motor sports',
                     '',
-                    'True'
+                    'False'
                 ]);
             });
         });
